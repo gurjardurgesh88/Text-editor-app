@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-// import About from "./components/About";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); //wheather dark mode is enable or not
@@ -45,7 +45,7 @@ function App() {
   };
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <Navbar
           title="Textutiles"
           mode={mode}
@@ -55,18 +55,21 @@ function App() {
 
         <Alert alert={alert} />
         <div className="container my-3">
-          {/* <Routes> */}
-            {/* <Route path="/about" element={<About />} /> */}
-            {/* <Route path="/" element={ */}
-              <TextForm
-                showAlert={showAlert}
-                heading="Enter the text to analyze below"
-                mode={mode}
-              />
-            {/* } /> */}
-          {/* </Routes> */}
+          <Routes>
+            <Route path="/about" element={<About mode={mode} />} />
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter the text to analyze below"
+                  mode={mode}
+                />
+              }
+            />
+          </Routes>
         </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
           
