@@ -74,5 +74,7 @@ function App() {
   );
           
 }
+console.log("🌟 This is the latest deployed version - updated");
 
 export default App;
+
