@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Text-editor-app/static/css/main.e6c13ad2.css",
-    "main.js": "/Text-editor-app/static/js/main.d4e48ccf.js",
+    "main.js": "/Text-editor-app/static/js/main.e58b6df7.js",
     "static/js/453.ed3810f9.chunk.js": "/Text-editor-app/static/js/453.ed3810f9.chunk.js",
     "index.html": "/Text-editor-app/index.html",
     "main.e6c13ad2.css.map": "/Text-editor-app/static/css/main.e6c13ad2.css.map",
-    "main.d4e48ccf.js.map": "/Text-editor-app/static/js/main.d4e48ccf.js.map",
+    "main.e58b6df7.js.map": "/Text-editor-app/static/js/main.e58b6df7.js.map",
     "453.ed3810f9.chunk.js.map": "/Text-editor-app/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.d4e48ccf.js"
+    "static/js/main.e58b6df7.js"
   ]
 }
