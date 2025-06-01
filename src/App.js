@@ -62,7 +62,7 @@ function App() {
               element={
                 <TextForm
                   showAlert={showAlert}
-                  heading="Enter the text to analyze below"
+                  heading=" Try Textutils- word counter,character counter, remove extra spaces"
                   mode={mode}
                 />
               }
@@ -72,9 +72,5 @@ function App() {
       </Router>
     </>
   );
-          
 }
-console.log("🌟 This is the latest deployed version - updated");
-
 export default App;
-

@@ -43,7 +43,7 @@ export default function TextForm(props)
         className="container"
         style={{ color: mode === "dark" ? "white" : "#042743" }}
       >
-        <h1>{heading} </h1>
+        <h1 className = "mb-2">{heading} </h1>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -78,18 +78,11 @@ export default function TextForm(props)
         style={{ color: mode === "dark" ? "white" : "#042743" }}
       >
         <h2>your text summary</h2>
-        <p>
-          {
-            text
-              .trim()
-              .split(/\s+/)
-              .filter((el) => el.length !== 0).length
-          }{" "}
-          words and {text.replace(/\s/g, "").length} characters
+        <p>{text.split(" ").filter((e)=> {return e.length !==0}).length}words and {text.length} characters
         </p>
 
         <p>
-          {0.008 * text.split(" ").filter((el) => el.length !== 0).length}{" "}
+          {0.008 * text.split("").filter((e) => { return e.length !== 0 }).length}
           Minutes Read
         </p>
         <h2>preview</h2>
