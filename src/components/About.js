@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+// import PropTypes from "prop-types";  
+// import React, { useState } from "react";
 
 export default function About(props) {
   // const [myStyle, setMyStyle] = useState({

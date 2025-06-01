@@ -29,7 +29,7 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode has been enable", "success");
-      document.title = "Textutiles - Dark Mode ";
+      // document.title = "Textutiles - Dark Mode ";
       // setInterval(() => {
       //   document.title = 'Textutiles is Amazing'
       // }, 2000);
@@ -40,7 +40,7 @@ function App() {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enable", "success");
-      document.title = "Textutiles - Light Mode ";
+      // document.title = "Textutiles - Light Mode ";
     }
   };
   return (
