@@ -1,20 +1,12 @@
 import React from "react";
-// import PropTypes from "prop-types";  
-// import React, { useState } from "react";
+
 
 export default function About(props) {
-  // const [myStyle, setMyStyle] = useState({
-  //   color: "black",
-  //   backgroundColor: "white",
-  // });
+ 
   let myStyle = {
     color: props.mode === "dark" ? "white" : "#042743",
     backgroundColor: props.mode === "dark" ? "rgb(36 74 108)" : "white",
-    // border: "2px solid",
-    // borderColor: props.mode === "dark" ? "white" : "#042743",
   };
- 
-
   return (
     <div className="container" style={{color: props.mode === "dark" ? "white" : "#042743"}}>
       <h1 className="my3">About US</h1>
