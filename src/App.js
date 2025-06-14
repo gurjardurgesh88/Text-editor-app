@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-// import About from "./components/About";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); //wheather dark mode is enable or not
@@ -30,12 +30,7 @@ function App() {
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode has been enable", "success");
       document.title = "Textutiles - Dark Mode ";
-      // setInterval(() => {
-      //   document.title = 'Textutiles is Amazing'
-      // }, 2000);
-      // setInterval(() => {
-      //   document.title = 'Install Textutiles Now'
-      // }, 3000);
+     
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
@@ -45,28 +40,40 @@ function App() {
   };
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <Navbar
           title="Textutiles"
           mode={mode}
           toggleMode={toggleMode}
           onThemeChange={handleThemeChange}
         />
-
         <Alert alert={alert} />
         <div className="container my-3">
-          {/* <Routes> */}
-            {/* <Route path="/about" element={<About />} /> */}
-            {/* <Route path="/" element={ */}
-              <TextForm
-                showAlert={showAlert}
-                heading="Enter the text to analyze below"
-                mode={mode}
-              />
-            {/* } /> */}
-          {/* </Routes> */}
+          <Routes>
+          <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter the text to analyze below"
+                  mode={mode}
+                />
+              }
+            />
+            <Route
+              path="/Text-editor-app"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter the text to analyze below"
+                  mode={mode}
+                />
+              }
+            />
+            <Route path="/about" element={<About />} />
+          </Routes>
         </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
           

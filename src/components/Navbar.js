@@ -1,19 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Navbar({
   title = "Set title here",
   // about = "Set about here",
   mode,
-  toggleMode
+  toggleMode,
 }) {
   return (
     <>
       <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode}`}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="#">
             {title}
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,37 +28,31 @@ export default function Navbar({
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                {/* <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link" aria-current="page" to="/">
                   Home
-                </Link> */}
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
+                </Link>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   about
                 </Link>
-              </li> */}
+              </li>
             </ul>
-            {/* <form className="d-flex" role="search">
+            <div
+              className={`form-check form-switch text-${
+                mode === "light" ? "dark" : "light"
+              }`}
+            >
               <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-primary-danger" type="submit">
-                Search
-              </button>
-            </form> */}
-            <div className={`form-check form-switch text-${mode==='light'?'dark':'light'}`}>
-              <input onClick={toggleMode}
+                onClick={toggleMode}
                 className="form-check-input "
                 type="checkbox"
                 vid="flexSwitchcheckDefault"
               />
-              <label className="form-check-label" htmlFor="flexSwitchcheckDefault">
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchcheckDefault"
+              >
                 {" "}
                 Enable Dark Mode
               </label>
