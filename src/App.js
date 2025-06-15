@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename= "/">
       <Navbar
         title="Textutiles"
         mode={mode}
