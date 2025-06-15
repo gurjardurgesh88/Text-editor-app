@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <Router basename= "/">
+    <Router>
       <Navbar
         title="Textutiles"
         mode={mode}
