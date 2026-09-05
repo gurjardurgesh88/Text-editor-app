@@ -29,7 +29,7 @@ https://text-editor-online.vercel.app/
 Clone the repository:
 
 ```bash
-git clone https://github.com/gurjardurgesh88/Text-editor-app.git
+git clone https://github.com/durgeshpateldev/Text-editor-app.git
 ```
 
 Install the dependencies:
